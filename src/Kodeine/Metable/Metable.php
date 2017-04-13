@@ -147,10 +147,10 @@ trait Metable
     /**
      * Relationship for meta tables
      */
-    public function metas()
+    public function meta()
     {
         $model = new \Kodeine\Metable\MetaData();
-        $model->setTable($this->getMetaTable());
+        $model->setTable($this->getMetaTable() ?: $this->table.'_meta');
 
         return new HasMany($model->newQuery(), $this, $this->getForeignKey(), $this->getKeyName());
     }
@@ -216,7 +216,7 @@ trait Metable
             $this->setObserver();
 
             if ($this->exists) {
-                $objects = $this->metas
+                $objects = $this->meta
                     ->where($this->metaKeyName, $this->modelKey);
 
                 if (!is_null($objects)) {
