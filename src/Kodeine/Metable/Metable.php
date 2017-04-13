@@ -3,6 +3,7 @@
 namespace Kodeine\Metable;
 
 use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Support\Collection as BaseCollection;
 
 trait Metable
