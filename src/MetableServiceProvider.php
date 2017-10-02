@@ -20,7 +20,6 @@ class MetableServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        
     }
 
     /**

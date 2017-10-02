@@ -61,7 +61,7 @@ class MetaData extends Model
             $this->attributes['value'] = $this->fromDateTime($value);
         } elseif ($value instanceof Model) {
             $this->type = 'model';
-            $this->attributes['value'] = get_class($value).(!$value->exists ? '' : '#'.$value->getKey());
+            $this->attributes['value'] = get_class($value).(! $value->exists ? '' : '#'.$value->getKey());
         } elseif (is_object($value)) {
             $this->type = 'object';
             $this->attributes['value'] = json_encode($value);

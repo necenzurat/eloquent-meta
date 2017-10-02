@@ -8,14 +8,13 @@ use Illuminate\Support\Collection as BaseCollection;
 
 trait Metable
 {
-    
     /**
      * Meta scope for easier join
-     * -------------------------
+     * -------------------------.
      */
     public function scopeMeta($query)
     {
-            return $query->join($this->getTable(), $this->getQualifiedKeyName(), '=', $this->getMetaTable().$this->getMetaKeyName())
+        return $query->join($this->getTable(), $this->getQualifiedKeyName(), '=', $this->getMetaTable().$this->getMetaKeyName())
                 ->select($this->getTable().'.*');
     }
 
@@ -44,7 +43,7 @@ trait Metable
         }
 
         return $this->metaData[$key] = $this->getModelStub([
-            'key'   => $key,
+            'key' => $key,
             'value' => $value,
         ]);
     }
@@ -94,7 +93,6 @@ trait Metable
      * Get Meta Data functions
      * -------------------------.
      */
-     
     public function getMeta($key = null, $raw = false)
     {
         if (is_string($key) && preg_match('/[,|]/is', $key, $m)) {
@@ -122,7 +120,7 @@ trait Metable
         $collection = new BaseCollection();
 
         foreach ($this->metaData as $meta) {
-            if (!$meta->isMarkedForDeletion() && in_array($meta->key, $keys)) {
+            if (! $meta->isMarkedForDeletion() && in_array($meta->key, $keys)) {
                 $collection->put($meta->key, $raw ? $meta : $meta->value);
             }
         }
@@ -137,7 +135,7 @@ trait Metable
         $collection = new BaseCollection();
 
         foreach ($this->metaData as $meta) {
-            if (!$meta->isMarkedForDeletion()) {
+            if (! $meta->isMarkedForDeletion()) {
                 $collection->put($meta->key, $raw ? $meta : $meta->value);
             }
         }
@@ -146,7 +144,7 @@ trait Metable
     }
 
     /**
-     * Relationship for meta tables
+     * Relationship for meta tables.
      */
     public function meta()
     {
@@ -213,14 +211,14 @@ trait Metable
 
     protected function getMetaData()
     {
-        if (!isset($this->metaLoaded)) {
+        if (! isset($this->metaLoaded)) {
             $this->setObserver();
 
             if ($this->exists) {
                 $objects = $this->meta
                     ->where($this->metaKeyName, $this->modelKey);
 
-                if (!is_null($objects)) {
+                if (! is_null($objects)) {
                     $this->metaLoaded = true;
 
                     return $this->metaData = $objects->keyBy('key');
@@ -322,7 +320,7 @@ trait Metable
         // leave model relation methods for parent::
         $isRelationship = method_exists($this, $attr);
 
-        if (method_exists($this, $getter) && !$isRelationship) {
+        if (method_exists($this, $getter) && ! $isRelationship) {
             return $this->{$getter}();
         }
 
