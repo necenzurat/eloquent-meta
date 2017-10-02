@@ -1,6 +1,6 @@
 <?php
 
-namespace Kodeine\Metable;
+namespace necenzurat\EloquentMeta;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -20,7 +20,7 @@ class MetableServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->package('kodeine/laravel-metable');
+        
     }
 
     /**

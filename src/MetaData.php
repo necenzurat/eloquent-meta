@@ -1,6 +1,6 @@
 <?php
 
-namespace Kodeine\Metable;
+namespace necenzurat\EloquentMeta;
 
 use DateTime;
 use Illuminate\Database\Eloquent\Model;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Kodeine\Metable;
+namespace necenzurat\EloquentMeta;
 
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Relations\HasMany;
@@ -150,7 +150,7 @@ trait Metable
      */
     public function meta()
     {
-        $model = new \Kodeine\Metable\MetaData();
+        $model = new \necenzurat\EloquentMeta\MetaData();
         $model->setTable($this->getMetaTable() ?: $this->table.'_meta');
 
         return new HasMany($model->newQuery(), $this, $this->getForeignKey(), $this->getKeyName());
@@ -182,7 +182,7 @@ trait Metable
     protected function getModelStub()
     {
         // get new meta model instance
-        $model = new \Kodeine\Metable\MetaData();
+        $model = new \necenzurat\EloquentMeta\MetaData();
         $model->setTable($this->metaTable);
 
         // model fill with attributes.
