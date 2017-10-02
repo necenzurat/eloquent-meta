@@ -22,6 +22,8 @@ composer require necenzurat/eloquent-meta
 
 After that, run composer install to install the package.
 
+Todo: make an generator for this
+
 #### Migration Table Schema
 ```php
 /**
@@ -31,11 +33,11 @@ After that, run composer install to install the package.
 */
 public function up()
 {
-    Schema::create('posts_meta', function (Blueprint $table) {
+    Schema::create('MODEL_meta', function (Blueprint $table) {
         $table->increments('id');
 
-        $table->integer('post_id')->unsigned()->index();
-        $table->foreign('post_id')->references('id')->on('posts')->onDelete('cascade');
+        $table->integer('model_id')->unsigned()->index();
+        $table->foreign('model_id')->references('id')->on('MODEL')->onDelete('cascade');
 
         $table->string('type')->default('null');
 
@@ -53,7 +55,7 @@ public function up()
 */
 public function down()
 {
-    Schema::drop('posts_meta');
+    Schema::drop('MODEL_meta');
 }
 ```
 ## Configuration
@@ -79,7 +81,7 @@ In case you need to define your own meta table name, you can specify in model:
 ```php
 class Post extends Eloquent
 {
-    protected $metaTable = 'posts_meta'; //optional.
+    protected $metaTable = 'model_meta'; //optional.
 }
 ```
 
