@@ -1,5 +1,5 @@
 {
-    "name": "necenzurat/laravel-meta",
+    "name": "necenzurat/eloquent-meta",
     "description": "Fluent Meta Data for Eloquent Models, as if it is a property on your model.",
     "keywords": ["laravel", "meta", "metas", "meta data", "data" , "metadata", "metable", "model", "eloquent", "kodeine"],
     "authors": [
