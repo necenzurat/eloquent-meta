@@ -1,11 +1,13 @@
 # Fluent Meta Data for Eloquent Models
 [![Laravel](https://img.shields.io/badge/Laravel-~5.1-orange.svg?style=flat-square)](http://laravel.com)
-[![Source](http://img.shields.io/badge/source-kodeine/laravel--meta-blue.svg?style=flat-square)](https://github.com/kodeine/laravel-meta/)
-[![Build Status](http://img.shields.io/travis/kodeine/laravel--meta/master.svg?style=flat-square)](https://travis-ci.org/kodeine/laravel-meta)
-[![License](http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](https://tldrlegal.com/license/mit-license)
+[![Latest Version](https://img.shields.io/packagist/v/symfony/symfony.svg?style=flat-blue)]
+[![Downloads](https://img.shields.io/packagist/dt/necenzurat/eloquent-meta.svg?style=flat-blue)](http://laravel.com)
+[![Source](https://img.shields.io/badge/source-necenzurat/eloquent--meta-blue.svg?style=flat-square)](https://github.com/necenzurat/eloquent-meta/)
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/85d12ead-a887-49c9-8c42-adc0686aca5a/mini.png)](https://insight.sensiolabs.com/projects/85d12ead-a887-49c9-8c42-adc0686aca5a)
+[![License](https://img.shields.io/github/license/necenzurat/eloquent-meta.svg?style=flat-square)](/eloquent-meta/LICENSE)
+[![BADGINATOR](https://badginator.herokuapp.com/necenzurat/eloquent-meta.svg)](https://github.com/defunctzombie/badginator)
 
 A fork from [kodeine/laravel-meta](https://github.com/kodeine/laravel-meta) updated and compatible with Laravel 5.x (including 5.5)
-
 
 Metable Trait adds the ability to access meta data as if it is a property on your model.
 Metable is Fluent, just like using an eloquent model attribute you can set or unset metas. Follow along the documentation to find out more.
