@@ -4,6 +4,9 @@
 [![Build Status](http://img.shields.io/travis/kodeine/laravel--meta/master.svg?style=flat-square)](https://travis-ci.org/kodeine/laravel-meta)
 [![License](http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](https://tldrlegal.com/license/mit-license)
 
+A fork from [kodeine/laravel-meta](https://github.com/kodeine/laravel-meta) updated and compatible with Laravel 5.x (including 5.5)
+
+
 Metable Trait adds the ability to access meta data as if it is a property on your model.
 Metable is Fluent, just like using an eloquent model attribute you can set or unset metas. Follow along the documentation to find out more.
 
@@ -14,7 +17,7 @@ Metable is Fluent, just like using an eloquent model attribute you can set or un
 Add this to your composer.json file, in the require object:
 
 ```javascript
-"kodeine/laravel-meta": "dev-master"
+composer require necenzurat/eloquent-meta
 ```
 
 After that, run composer install to install the package.
@@ -61,7 +64,7 @@ public function down()
 Next, add the `Metable` trait to each of your metable model definition:
 
 ```php
-use Kodeine\Metable\Metable;
+use necenzurat\EloquentMeta\Metable;
 
 class Post extends Eloquent
 {
@@ -256,5 +259,5 @@ $post = Post::meta()
 When you need to retrive multiple results from your model, you can eager load `metas`
 
 ```
-$post = Post::with(['metas'])->get();
+$post = Post::with(['meta'])->get();
 ```
