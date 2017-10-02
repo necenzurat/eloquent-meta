@@ -17,7 +17,7 @@ Metable is Fluent, just like using an eloquent model attribute you can set or un
 Add this to your composer.json file, in the require object:
 
 ```javascript
-"kodeine/laravel-meta": "dev-master"
+composer require necenzurat/eloquent-meta
 ```
 
 After that, run composer install to install the package.
@@ -64,7 +64,7 @@ public function down()
 Next, add the `Metable` trait to each of your metable model definition:
 
 ```php
-use Kodeine\Metable\Metable;
+use necenzurat\EloquentMeta\Metable;
 
 class Post extends Eloquent
 {
