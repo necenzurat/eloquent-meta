@@ -1,6 +1,6 @@
 # Fluent Meta Data for Eloquent Models
 [![Laravel](https://img.shields.io/badge/Laravel-~5.1-orange.svg?style=flat-square)](http://laravel.com)
-[![Latest Version](https://img.shields.io/packagist/v/symfony/symfony.svg?style=flat-blue)]
+[![Latest Version](https://img.shields.io/packagist/v/necenzurat/eloquent-meta.svg?style=flat-blue)
 [![Downloads](https://img.shields.io/packagist/dt/necenzurat/eloquent-meta.svg?style=flat-blue)](http://laravel.com)
 [![Source](https://img.shields.io/badge/source-necenzurat/eloquent--meta-blue.svg?style=flat-square)](https://github.com/necenzurat/eloquent-meta/)
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/85d12ead-a887-49c9-8c42-adc0686aca5a/mini.png)](https://insight.sensiolabs.com/projects/85d12ead-a887-49c9-8c42-adc0686aca5a)
