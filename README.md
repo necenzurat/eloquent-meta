@@ -4,6 +4,9 @@
 [![Build Status](http://img.shields.io/travis/kodeine/laravel--meta/master.svg?style=flat-square)](https://travis-ci.org/kodeine/laravel-meta)
 [![License](http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](https://tldrlegal.com/license/mit-license)
 
+A fork from [kodeine/laravel-meta](https://github.com/kodeine/laravel-meta) updated and compatible with Laravel 5.x (including 5.5)
+
+
 Metable Trait adds the ability to access meta data as if it is a property on your model.
 Metable is Fluent, just like using an eloquent model attribute you can set or unset metas. Follow along the documentation to find out more.
 
