@@ -1,5 +1,5 @@
 {
-    "name": "kodeine/laravel-meta",
+    "name": "necenzurat/laravel-meta",
     "description": "Fluent Meta Data for Eloquent Models, as if it is a property on your model.",
     "keywords": ["laravel", "meta", "metas", "meta data", "data" , "metadata", "metable", "model", "eloquent", "kodeine"],
     "authors": [
@@ -7,17 +7,29 @@
             "name": "Ahsen M.",
             "homepage": "https://github.com/kodeine",
             "role": "Developer"
+        },
+        {
+            "name": "necenzurat",
+            "homepage": "https://github.com/necenzurat",
+            "role": "Developer"
         }
     ],
     "require": {
         "php": ">=5.4.0",
-        "illuminate/support": "~5.0|~5.1"
+        "illuminate/support": "~5^"
     },
     "autoload": {
         "classmap": [
         ],
-        "psr-0": {
-            "Kodeine\\Metable\\": "src/"
+        "psr-4": {
+            "necenzurat\\EloquentMeta\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "necenzurat\\EloquentMeta\\MetableServiceProvider"
+            ]
         }
     },
     "minimum-stability": "stable",
