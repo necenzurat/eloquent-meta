@@ -33,5 +33,8 @@
         }
     },
     "minimum-stability": "stable",
-    "license": "MIT"
+    "license": "MIT",
+    "require-dev": {
+        "arubacao/php-cs-fixer-config": "^0.1.0"
+    }
 }
